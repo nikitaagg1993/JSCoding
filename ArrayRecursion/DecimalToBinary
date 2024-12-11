@@ -1,0 +1,25 @@
+ let ans = ''; 
+function dec_to_binary(x) {
+
+console.log(x)
+
+	if(x<0) return
+	if(x === 1) {
+  ans+='1';
+    return;
+   }
+  else if(x===0) {
+  ans+='0';
+    return;
+  }
+
+  let modX = x%2;
+  dec_to_binary(parseInt(x / 2, 10));
+  
+  if(modX === 0) ans+='0';
+  else if (modX === 1) ans+='1';
+}
+
+dec_to_binary(15)
+
+console.log(ans)
